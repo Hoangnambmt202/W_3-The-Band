@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 html {
-  
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -56,6 +56,7 @@ html {
   background-color: #000;
   color: #fff;
   border: none;
+  -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -66,7 +67,6 @@ html {
 
 /* main */
 #main {
-
   position: relative;
   min-height: 3000px;
 }
@@ -78,7 +78,6 @@ html {
   left: 0;
   right: 0;
   z-index: 1;
-  overflow: hidden;
 }
 #nav,
 .subnav {
@@ -98,7 +97,7 @@ html {
   text-decoration: none;
   padding: 0 30px;
   line-height: 50px;
-  display: inline-block;
+  display: block;
 }
 #nav li:hover .subnav {
   display: block;
@@ -125,7 +124,18 @@ html {
   display: inline-block;
 }
 
-#header .mobile-menu-btn,
+#header .mobile-menu-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right;
+  color: #fff;
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0 21px;
+  
+}
 #header .search-button {
   float: right;
   display: block;
@@ -134,7 +144,6 @@ html {
   line-height: 50px;
   padding: 0 21px;
 }
-#header .mobile-menu-btn:hover,
 #header .search-button:hover {
   background-color: red;
   cursor: pointer;
@@ -145,10 +154,10 @@ html {
 }
 #slider {
   position: relative;
-  height: 250px;
+  height: auto;
   margin-top: 50px;
   padding-top: 50%;
-  background: url(/assets/img/la.jpg) top center / contain no-repeat;
+  background: url(../img/la.jpg) top center / contain no-repeat;
 }
 
 #slider .text-content {
@@ -165,6 +174,7 @@ html {
 #slider .text-description {
   font-size: 15px;
   margin-top: 25px;
+  text-shadow: 0 0 1px #000;
 }
 
 #content .content-section {
@@ -221,7 +231,7 @@ html {
 #content .tour-section {
   background-color: #000;
   display: block;
-  height: 800px; 
+  height: auto; 
   width: 100%;
   
 }
@@ -230,7 +240,6 @@ html {
 
 }
 .ticket-list li {
-
   color: #757575;
   font-size: 15px;
   padding: 11px 16px;
@@ -260,7 +269,7 @@ html {
 
 /* Places */
 .places-list {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .place-img {
